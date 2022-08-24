@@ -42,9 +42,9 @@ const Card = styled.div`
   width: 300px;
   height: 400px;
   margin: 20px;
-  background: #000;
+  background: #f8f8f8;
   border-radius: 15px;
-  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5); */
 `;
 const Face = styled.div`
   position: absolute;
@@ -58,7 +58,7 @@ const Face = styled.div`
   padding: 24px;
 `;
 const Contents = styled.div`
-  color:black;
+  color: black;
   height: 100%;
   margin: auto;
 `;

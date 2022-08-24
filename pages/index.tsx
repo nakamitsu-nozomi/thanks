@@ -37,11 +37,13 @@ export const getStaticProps = async (): Promise<
 export default Home;
 
 const Container = styled.div`
+  @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
   width: 100%;
   height: 100vh;
   padding: 40px;
-  background-color: #a9c9ff;
-  background-image: linear-gradient(180deg, #a9c9ff 0%, #ffbbec 100%);
+  font-family: 'Yusei Magic', sans-serif;
+  /* background-color: #a9c9ff; */
+  /* background-image: linear-gradient(180deg, #a9c9ff 0%, #ffbbec 100%); */
 `;
 
 const Cards = styled.div`
