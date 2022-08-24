@@ -1,0 +1,1 @@
+{"apiFields":[{"idValue":"FtzvVenT_s","fieldId":"userName","name":"投稿者","kind":"text","required":true,"isUnique":false},{"fieldId":"contents","name":"メッセージ内容","kind":"textArea","required":true},{"fieldId":"userIcon","name":"投稿者アイコン","kind":"media","required":true}],"customFields":[]}
