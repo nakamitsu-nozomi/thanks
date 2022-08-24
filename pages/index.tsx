@@ -1,23 +1,21 @@
 import { client } from '../libs/client';
-import { message } from '../types/cms-types';
 import { GetStaticPropsResult, NextPage } from 'next';
-type Message = message;
+import * as Card from '../components/Card';
+import { Message } from '../entities';
+import styled from 'styled-components';
+
 type Result = {
   messages: Message[];
 };
 const Home: NextPage<Result> = ({ messages }) => {
   return (
-    <div>
-      <ul>
+    <Container>
+      <Cards>
         {messages.map((message) => (
-          <li key={message.id}>
-            <p>{message.userName}</p>
-            <p>{message.contents}</p>
-            <img src={message.userIcon.url} alt="" />
-          </li>
+          <Card.Component message={message} />
         ))}
-      </ul>
-    </div>
+      </Cards>
+    </Container>
   );
 };
 
@@ -37,3 +35,17 @@ export const getStaticProps = async (): Promise<
   };
 };
 export default Home;
+
+const Container = styled.div`
+  width: 100%;
+  height: 100vh;
+  padding: 40px;
+  background-color: #a9c9ff;
+  background-image: linear-gradient(180deg, #a9c9ff 0%, #ffbbec 100%);
+`;
+
+const Cards = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+`;
